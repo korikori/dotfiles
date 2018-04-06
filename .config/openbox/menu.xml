@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>
+					gmrun
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+					terminator
+				</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>
+					google-chrome-stable --disk-cache-dir=/tmp/cache
+				</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+					pcmanfm --no-desktop
+				</execute>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>
+					geany
+				</execute>
+			</action>
+		</item>
+		<item label="Music Player">
+			<action name="Execute">
+				<execute>
+					deadbeef
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="accessories" label="Accessories">
+		    <item label="Archive Manager">
+				<action name="Execute">
+					<execute>
+						engrampa
+					</execute>
+				</action>
+			</item>
+			<item label="geany Text Editor">
+				<action name="Execute">
+					<execute>
+						geany
+					</execute>
+				</action>
+			</item>
+			<item label="Terminator Terminal">
+				<action name="Execute">
+					<execute>
+						terminator
+					</execute>
+				</action>
+			</item>
+			<item label="pcmanfm File Manager">
+				<action name="Execute">
+					<execute>
+						pcmanfm --no-desktop
+					</execute>
+				</action>
+			</item>
+			<item label="pcmanfm File Manager (root)">
+				<action name="Execute">
+					<execute>
+						gksudo pcmanfm --no-desktop
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="graphics" label="Graphics">
+		    <item label="GIMP">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
+			<item label="Inkscape">
+				<action name="Execute">
+					<execute>
+						inkscape
+					</execute>
+				</action>
+			</item>
+			<item label="Viewnior Image Viewer">
+				<action name="Execute">
+					<execute>
+						viewnior
+					</execute>
+				</action>
+			</item>
+			<item label="Cheese">
+				<action name="Execute">
+					<execute>
+						cheese
+					</execute>
+				</action>
+			</item>
+		    <menu id="graphicsScreenshots" label="Take Screenshot">
+				<item label="Now">
+					<action name="Execute">
+						<execute>
+							scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/scrot/ &amp; viewnior ~/images/screenshots/scrot/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 5 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 10 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>
+							scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="multimedia" label="Multimedia">
+		    <item label="Popcorn Time">
+				<action name="Execute">
+					<execute>
+						/home/kori/bin/linux64/Popcorn-Time
+					</execute>
+				</action>
+			</item>
+		    <item label="VLC Media Player">
+				<action name="Execute">
+					<execute>
+						vlc
+					</execute>
+				</action>
+			</item>
+		    <item label="deadbeef">
+				<action name="Execute">
+					<execute>
+						deadbeef
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="network" label="Network">
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>
+						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="Firefox (private mode)">
+				<action name="Execute">
+					<execute>
+						firefox --private
+					</execute>
+				</action>
+			</item>
+			<item label="Chrome">
+				<action name="Execute">
+					<execute>
+						google-chrome-stable --disk-cache-dir=/tmp/cache
+					</execute>
+				</action>
+			</item>
+			<item label="Chrome (private mode)">
+				<action name="Execute">
+					<execute>
+						google-chrome-stable --disk-cache-dir=/tmp/cache --incognito
+					</execute>
+				</action>
+			</item>
+			<item label="Opera">
+				<action name="Execute">
+					<execute>
+						opera --private
+					</execute>
+				</action>
+			</item>
+			<separator label="etc"/>
+			<item label="FileZilla">
+				<action name="Execute">
+					<execute>
+						filezilla
+					</execute>
+				</action>
+			</item>
+			<item label="Transmission BitTorrent Client">
+				<action name="Execute">
+					<execute>
+						transmission
+					</execute>
+				</action>
+			</item>
+			<item label="Skype">
+				<action name="Execute">
+					<execute>
+						skype
+					</execute>
+				</action>
+			</item>
+			<item label="wireshark">
+				<action name="Execute">
+					<execute>
+						gksudo wireshark
+					</execute>
+				</action>
+			</item>
+			<item label="Remote Filesystems">
+				<action name="Execute">
+					<execute>
+						gigolo
+					</execute>
+				</action>
+			</item>
+			<menu execute="cb-remote-desktop-pipemenu" id="remotedesktop" label="Remote Desktop"/>
+			<separator label="Services"/>
+			<menu execute="cb-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
+		</menu>
+		<menu id="office" label="Office">
+			<item label="libreoffice">
+				<action name="Execute">
+					<execute>
+						libreoffice
+					</execute>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>
+						galculator
+					</execute>
+				</action>
+			</item>
+			<item label="Evince PDF Viewer">
+				<action name="Execute">
+					<execute>
+						evince
+					</execute>
+				</action>
+			</item>
+		</menu>
+				<menu id="work" label="Work">
+			<item label="Semafor">
+				<action name="Execute">
+					<execute>
+						sh ~/bin/semafor1.sh
+					</execute>
+				</action>
+			</item>
+			<item label="kill Semafor">
+				<action name="Execute">
+					<execute>
+                       sh ~/bin/semakill.sh
+					</execute>
+				</action>
+			</item>
+			<item label="gajim">
+				<action name="Execute">
+					<execute>
+						gajim
+					</execute>
+				</action>
+			</item>
+			<item label="Thunderbird">
+				<action name="Execute">
+					<execute>
+						thunderbird
+					</execute>
+				</action>
+			</item>
+			<item label="regtool">
+				<action name="Execute">
+					<execute>
+					    wine ~/bin/RegTool.exe
+					</execute>
+				</action>
+			</item>
+			<item label="abuseteam">
+				<action name="Execute">
+					<execute>
+					    terminator --command=&quot;ssh kori@abuseteam.office.suresupport.com&quot;
+					</execute>
+				</action>
+			</item>
+			<item label="msgviewer">
+				<action name="Execute">
+					<execute>
+						/usr/lib/jvm/java-8-openjdk/jre/lib/jexec ~/bin/msgviewer/MSGViewer.jar
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-51827" label="etc">
+				<item label="VirtualBox">
+				<action name="Execute">
+					<execute>
+						virtualbox
+					</execute>
+				</action>
+			</item>
+			<item label="DosBox">
+				<action name="Execute">
+					<execute>
+						dosbox
+					</execute>
+				</action>
+			</item>
+			<menu id="games" label="games">
+			<item label="FreeCiv">
+				<action name="Execute">
+					<execute>
+						freeciv
+					</execute>
+				</action>
+			</item>
+			<item label="chess">
+				<action name="Execute">
+					<execute>
+						xboard
+					</execute>
+				</action>
+			</item>
+			<item label="fallout">
+				<action name="Execute">
+					<execute>
+						terminator --command=&quot;cd /home/kori/.wine/drive_c/GOG\ Games/Fallout/ &amp; wine falloutw.exe&quot;
+					</execute>
+				</action>
+			</item>
+			<item label="planescape: torment">
+				<action name="Execute">
+					<execute>
+						terminator --command=&quot;cd /home/kori/.wine/drive_c/Program\ Files/GOG.com/Planescape\ Torment/ &amp; wine Torment.exe&quot;
+					</execute>
+				</action>
+			</item>
+			<item label="openra">
+				<action name="Execute">
+					<execute>
+						openra
+					</execute>
+				</action>
+			</item>
+			<item label="ScummVM">
+				<action name="Execute">
+					<execute>
+						scummvm
+					</execute>
+				</action>
+			</item>
+			<item label="steam">
+				<action name="Execute">
+					<execute>
+						steam
+					</execute>
+				</action>
+			</item>
+			<item label="gvba">
+				<action name="Execute">
+					<execute>
+						gvbam
+					</execute>
+				</action>
+			</item>
+
+			</menu>
+		</menu>
+		<separator/>
+		<menu id="settings" label="Settings">
+			<menu id="conkyconfig" label="Conky">
+				<item label="Edit .conkyrc">
+					<action name="Execute">
+						<execute>
+							geany ~/.conkyrc
+						</execute>
+					</action>
+				</item>
+				<item label="Restart Conky">
+					<action name="Execute">
+						<execute>
+							conkywonky
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							terminator --command="man conky"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="dmenuconfig" label="dmenu">
+				<item label="Edit start-up script">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/dmenu/dmenu-bind.sh
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							terminator --command="man dmenu"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="gmrunconfig" label="gmrun">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.gmrunrc
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							terminator --command="man gmrun"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="obConfig" label="Openbox">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/menu.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/rc.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/autostart
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Menu Editor">
+					<action name="Execute">
+						<execute>
+							obmenu
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Applications Settings Editor">
+					<action name="Execute">
+						<execute>
+							obapps
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+							obconf
+						</execute>
+					</action>
+				</item>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu id="terminatorconfig" label="Terminator">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/terminator/config
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							terminator --command="man terminator_config"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="fbpanelconfig" label="fbpanel">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/fbpanel/default
+						</execute>
+					</action>
+				</item>
+                <item label="Restart tint2">
+					<action name="Execute">
+						<execute>
+							/home/kori/bin/fbpanelrestart
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="DisplaySettings" label="Display Settings">
+			    <item label="arandr">
+				    <action name="Execute">
+					    <execute>
+						    arandr
+					    </execute>
+				    </action>
+			    </item>
+			    <separator label="Help?"/>
+			</menu>
+			<item label="Edit Default Applications">
+				<action name="Execute">
+					<execute>
+						terminator --command="sudo update-alternatives --all"
+					</execute>
+				</action>
+			</item>
+			<item label="User Interface Settings">
+				<action name="Execute">
+					<execute>
+						lxappearance
+					</execute>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<execute>
+						nitrogen ~/images/wallpapers/
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="System">
+			<item label="GParted">
+				<action name="Execute">
+					<execute>
+						gksudo gparted
+					</execute>
+				</action>
+			</item>
+			<item label="palimpsest">
+				<action name="Execute">
+					<execute>
+						gksudo gnome-disks
+					</execute>
+				</action>
+			</item>
+		    <item label="Baobab">
+				<action name="Execute">
+					<execute>
+						baobab
+					</execute>
+				</action>
+			</item>
+			<item label="Backup">
+				<action name="Execute">
+					<execute>
+						terminator --command=&quot;sh ~/bin/backup.sh&quot;
+					</execute>
+				</action>
+			</item>
+		    <menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
+		</menu>
+		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
+		<separator/>
+		<item label="Lock Screen">
+			<action name="Execute">
+				<execute>
+					cb-lock
+				</execute>
+			</action>
+		</item>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+					/home/kori/bin/cb-exit
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
