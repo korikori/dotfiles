@@ -8,5 +8,8 @@ cd ~/.dotfiles/
 git pull
 git push
 
+#initial stow
+stow *
+
 #re-stow
-stow -R *
+#stow -R *
