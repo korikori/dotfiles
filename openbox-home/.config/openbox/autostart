@@ -13,15 +13,10 @@
 ##
 ## Have fun! :)
 
-#udiskie &
-
-## Start session manager
-#lxsession &
-
 ## Enable power management
 #python /home/kori/bin/batterymon-clone-master/batterymon &
-#python2 bin/dualtidy.py &
-tp-battery-icon &
+python2 bin/dualtidy.py &
+#tp-battery-icon &
 
 ## Start Thunar Daemon (now pcmanfm)
 #thunar --daemon &
@@ -31,47 +26,21 @@ pcmanfm -d &
 (sleep 3s && nitrogen --restore) &
 
 ## Launch panel
-tint2 &
+#tint2 &
 #pypanel &
-#fbpanel &
+fbpanel &
 
 ## Enable Eyecandy - off by default, uncomment one of the commands below.
-## Note: cairo-compmgr prefers a sleep delay, else it tends to produce
-## odd shadows/quirks around tint2 & Conky.
-#(sleep 10s && cb-compmgr --cairo-compmgr) &
-#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 compton -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
 
 ## Launch network manager applet
 (sleep 4s && nm-applet) &
-
-## Detect and configure touchpad. See 'man synclient' for more info.
-#if egrep -iq 'touchpad' /proc/bus/input/devices; then
-#    synclient VertEdgeScroll=1 &
-#    synclient TapButton1=1 &
-#fi
-
-## xfce4-power-manager
-#xfce4-power-manager &
-
-## Start xscreensaver
-#xscreensaver -no-splash &
 
 ## Start Conky after a slight delay
 (sleep 3s && conky -q) &
 
 ## Start volumeicon after a slight delay
 (sleep 3s && volumeicon) &
-
-## Start Clipboard manager
-##(sleep 3s && parcellite) &
-
-## Bad Nautilus, minimises the impact of running Nautilus under
-## an Openbox session by applying some gconf settings. Safe to delete.
-#cb-bad-nautilus &
-
-## devilspie
-#devilspie &
 
 ## The following command will set-up a keyboard map selection tool when
 ## running in a live session.
@@ -80,16 +49,6 @@ setxkbmap -model pc105 -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle" 
 
 ## caps lock == control
 (sleep 1 && xmodmap ~/.Xmodmap) &
-
-## cb-welcome - post-installation script, will not run in a live session and
-## only runs once. Safe to remove.
-#(sleep 10s && cb-welcome --firstrun) &
-
-## cb-fortune - have Statler say a little adage
-#(sleep 120s && cb-fortune) &
-
-# Autostart the Dropbox deamon
-#(sleep 10s && ~/.dropbox-dist/dropboxd) &
 
 #disable touchpad when typing
 #syndaemon -i 0.5 -t -K -R &

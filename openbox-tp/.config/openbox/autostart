@@ -1,0 +1,73 @@
+## Openbox autostart.sh
+## ====================
+## When you login to your CrunchBang Openbox session, this autostart script 
+## will be executed to set-up your environment and launch any applications
+## you want to run at startup.
+##
+## More information about this can be found at:
+## http://openbox.org/wiki/Help:Autostart
+##
+## If you do something cool with your autostart script and you think others
+## could benefit from your hack, please consider sharing it at:
+## http://crunchbanglinux.org/forums/
+##
+## Have fun! :)
+
+## Enable power management
+#python /home/kori/bin/batterymon-clone-master/batterymon &
+#python2 bin/dualtidy.py &
+tp-battery-icon &
+
+## Start Thunar Daemon (now pcmanfm)
+#thunar --daemon &
+pcmanfm -d &
+
+## Set desktop wallpaper
+(sleep 3s && nitrogen --restore) &
+
+## Launch panel
+tint2 &
+#pypanel &
+#fbpanel &
+
+## Enable Eyecandy - off by default, uncomment one of the commands below.
+compton -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
+
+## Launch network manager applet
+(sleep 4s && nm-applet) &
+
+## Detect and configure touchpad. See 'man synclient' for more info.
+#if egrep -iq 'touchpad' /proc/bus/input/devices; then
+#    synclient VertEdgeScroll=1 &
+#    synclient TapButton1=1 &
+#fi
+
+## Start Conky after a slight delay
+(sleep 3s && conky -q) &
+
+## Start volumeicon after a slight delay
+(sleep 3s && volumeicon) &
+
+## The following command will set-up a keyboard map selection tool when
+## running in a live session.
+cb-setxkbmap-live &
+setxkbmap -model pc105 -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle" &
+
+## caps lock == control
+(sleep 1 && xmodmap ~/.Xmodmap) &
+
+#disable touchpad when typing
+#syndaemon -i 0.5 -t -K -R &
+
+#pass
+#(sleep 10s && qtpass) &
+
+#im crap
+#viber &
+#skypeforlinux &
+
+#work tools
+#(sleep 30s && /usr/bin/sh ~/bin/semafor.sh) &
+
+#redshift
+pgrep redshift &> /dev/null || redshift-gtk &> /dev/null &
