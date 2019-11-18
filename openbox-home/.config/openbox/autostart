@@ -31,7 +31,7 @@ pcmanfm -d &
 fbpanel &
 
 ## Enable Eyecandy - off by default, uncomment one of the commands below.
-compton -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
+picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
 
 ## Launch network manager applet
 (sleep 4s && nm-applet) &
@@ -64,4 +64,4 @@ setxkbmap -model pc105 -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle" 
 #(sleep 30s && /usr/bin/sh ~/bin/semafor.sh) &
 
 #redshift
-pgrep redshift &> /dev/null || redshift-gtk &> /dev/null &
+#pgrep redshift &> /dev/null || redshift-gtk &> /dev/null &

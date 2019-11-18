@@ -31,7 +31,7 @@ tint2 &
 #fbpanel &
 
 ## Enable Eyecandy - off by default, uncomment one of the commands below.
-compton -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
+picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
 
 ## Launch network manager applet
 (sleep 4s && nm-applet) &
