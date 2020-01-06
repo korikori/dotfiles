@@ -1,13 +1,14 @@
 ## Openbox autostart.sh
 ## ====================
 
-## Enable power management
-#python2 bin/dualtidy.py &
+## Enable power management - now with even more batteries!
+#python2 bin/dualtidy.py & 
 tp-battery-icon &
+tp-battery-icon -b 2 &
 
 ## and notifications
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
-sh ~/bin/disco.sh &
+(sleep 4s && sh ~/bin/disco.sh) &
 
 ## Start pcmanfm
 pcmanfm -d &
