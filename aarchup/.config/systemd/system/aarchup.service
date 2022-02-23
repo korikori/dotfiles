@@ -1,0 +1,6 @@
+[Unit]
+Description=Run aarchup
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aarchup -t 5 -a "yay -Qu"

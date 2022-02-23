@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>
+					~/.config/dmenu/dmenu-bind.sh
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+					terminator
+				</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>
+					chromium --disk-cache-dir=/tmp/cache
+				</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+					pcmanfm --no-desktop
+				</execute>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>
+					geany
+				</execute>
+			</action>
+		</item>
+		<item label="Spotify">
+			<action name="Execute">
+				<execute>
+					spotify
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="accessories" label="Accessories">
+		    <item label="Archive Manager">
+				<action name="Execute">
+					<execute>
+						engrampa
+					</execute>
+				</action>
+			</item>
+			<item label="geany Text Editor">
+				<action name="Execute">
+					<execute>
+						geany
+					</execute>
+				</action>
+			</item>
+			<item label="Terminator Terminal">
+				<action name="Execute">
+					<execute>
+						terminator
+					</execute>
+				</action>
+			</item>
+			<item label="pcmanfm File Manager">
+				<action name="Execute">
+					<execute>
+						pcmanfm --no-desktop
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="graphics" label="Graphics">
+		    <item label="GIMP">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
+			<item label="Inkscape">
+				<action name="Execute">
+					<execute>
+						inkscape
+					</execute>
+				</action>
+			</item>
+			<item label="Viewnior Image Viewer">
+				<action name="Execute">
+					<execute>
+						viewnior
+					</execute>
+				</action>
+			</item>
+			<item label="Cheese">
+				<action name="Execute">
+					<execute>
+						cheese
+					</execute>
+				</action>
+			</item>
+		    <menu id="graphicsScreenshots" label="Take Screenshot">
+				<item label="Now">
+					<action name="Execute">
+						<execute>
+							scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/scrot/ &amp; viewnior ~/images/screenshots/scrot/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 5 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 10 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>
+							scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/screenshots/ &amp; viewnior ~/images/screenshots/$f'
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="multimedia" label="Multimedia">
+		    <item label="VLC Media Player">
+				<action name="Execute">
+					<execute>
+						vlc
+					</execute>
+				</action>
+			</item>
+		    <item label="deadbeef">
+				<action name="Execute">
+					<execute>
+						deadbeef
+					</execute>
+				</action>
+			</item>
+      		<item label="Spotify">
+			<action name="Execute">
+				<execute>
+					spotify
+				</execute>
+			</action>
+		</item>
+		</menu>
+		<menu id="network" label="Network">
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>
+						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="Firefox (private mode)">
+				<action name="Execute">
+					<execute>
+						firefox --private
+					</execute>
+				</action>
+			</item>
+			<item label="Chromium">
+				<action name="Execute">
+					<execute>
+						chromium --disk-cache-dir=/tmp/cache
+					</execute>
+				</action>
+			</item>
+			<item label="Chromium (private mode)">
+				<action name="Execute">
+					<execute>
+						chromium --disk-cache-dir=/tmp/cache --incognito
+					</execute>
+				</action>
+			</item>
+			<item label="Opera">
+				<action name="Execute">
+					<execute>
+						opera --private
+					</execute>
+				</action>
+			</item>
+			<separator label="etc"/>
+			<item label="FileZilla">
+				<action name="Execute">
+					<execute>
+						filezilla
+					</execute>
+				</action>
+			</item>
+			<item label="Transmission BitTorrent Client">
+				<action name="Execute">
+					<execute>
+						transmission
+					</execute>
+				</action>
+			</item>
+			<item label="Skype">
+				<action name="Execute">
+					<execute>
+						skype
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="office" label="Office">
+			<item label="LibreOffice">
+				<action name="Execute">
+					<execute>
+						libreoffice
+					</execute>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>
+						galculator
+					</execute>
+				</action>
+			</item>
+			<item label="Evince PDF Viewer">
+				<action name="Execute">
+					<execute>
+						evince
+					</execute>
+				</action>
+			</item>
+      <separator/>
+			<item label="Booklet Imposer">
+				<action name="Execute">
+					<execute>
+						bookletimposer
+					</execute>
+				</action>
+			</item>       
+			<item label="Scribus">
+				<action name="Execute">
+					<execute>
+						scribus
+					</execute>
+				</action>
+			</item>
+			<item label="YAC Reader Library">
+				<action name="Execute">
+					<execute>
+						YACReaderLibrary
+					</execute>
+				</action>
+			</item>     
+			<item label="Calibre">
+				<action name="Execute">
+					<execute>
+						calibre
+					</execute>
+				</action>
+			</item>     
+		</menu>
+				<menu id="work" label="Work">
+        <item label="Work">
+				<action name="Execute">
+					<execute>
+						sh ~/bin/postswitch
+					</execute>
+				</action>
+			</item>
+      <item label="AntiWork">
+				<action name="Execute">
+					<execute>
+						sh ~/bin/antiwork
+					</execute>
+				</action>
+			</item>
+      		<separator/>
+			<item label="Semafor">
+				<action name="Execute">
+					<execute>
+						sh ~/bin/semafor1.sh
+					</execute>
+				</action>
+			</item>
+			<item label="Kill Semafor">
+				<action name="Execute">
+					<execute>
+            sh ~/bin/semakill.sh
+					</execute>
+				</action>
+			</item>
+			<item label="Pidgin">
+				<action name="Execute">
+					<execute>
+						pidgin
+					</execute>
+				</action>
+			</item>
+			<item label="Thunderbird">
+				<action name="Execute">
+					<execute>
+						thunderbird
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-51827" label="etc">
+			<item label="Lutris">
+				<action name="Execute">
+					<execute>
+						lutris
+					</execute>
+				</action>
+			</item>
+			<item label="Steam">
+				<action name="Execute">
+					<execute>
+						steam
+					</execute>
+				</action>
+			</item>
+			<item label="GOG Galaxy">
+				<action name="Execute">
+					<execute>
+						minigalaxy
+					</execute>
+				</action>
+			</item>     
+      <item label="VirtualBox">
+				<action name="Execute">
+					<execute>
+						virtualbox
+					</execute>
+				</action>
+			</item>
+			<item label="DosBox">
+				<action name="Execute">
+					<execute>
+						dosbox
+					</execute>
+				</action>
+			</item>
+       </menu>
+		<separator/>
+		<menu id="settings" label="Settings">
+			<menu id="dmenuconfig" label="dmenu">
+				<item label="Edit start-up script">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/dmenu/dmenu-bind.sh
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="obConfig" label="Openbox">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/menu.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/rc.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/autostart
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+							obconf
+						</execute>
+					</action>
+				</item>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu id="terminatorconfig" label="Terminator">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/terminator/config
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="tint2config" label="tint2">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/tint2/tint2rc
+						</execute>
+					</action>
+				</item>
+                <item label="Restart tint2">
+					<action name="Execute">
+						<execute>
+							~/bin/tint2restart
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="DisplaySettings" label="Display Settings">
+			    <item label="arandr">
+				    <action name="Execute">
+					    <execute>
+						    arandr
+					    </execute>
+				    </action>
+			    </item>
+			</menu>
+			<item label="Edit Default Applications">
+				<action name="Execute">
+					<execute>
+						terminator --command="sudo update-alternatives --all"
+					</execute>
+				</action>
+			</item>
+			<item label="User Interface Settings">
+				<action name="Execute">
+					<execute>
+						lxappearance
+					</execute>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<execute>
+						nitrogen ~/images/wallpapers/
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="System">
+			<item label="GParted">
+				<action name="Execute">
+					<execute>
+						gparted
+					</execute>
+				</action>
+			</item>
+			<item label="palimpsest">
+				<action name="Execute">
+					<execute>
+						gnome-disks
+					</execute>
+				</action>
+			</item>
+		    <item label="Baobab">
+				<action name="Execute">
+					<execute>
+						baobab
+					</execute>
+				</action>
+			</item>
+			<item label="Backup">
+				<action name="Execute">
+					<execute>
+						terminator --command=&quot;sh ~/bin/backup.sh&quot;
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Lock Screen">
+			<action name="Execute">
+				<execute>
+					betterlockscreen -l
+				</execute>
+			</action>
+		</item>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+					ruby ~/bin/cb-exit.rb
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

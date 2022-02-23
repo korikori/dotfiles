@@ -1,0 +1,13 @@
+(if
+  (matches (application_name) "pyICDSemafor-tickets")
+  (begin
+    (stick)
+    (above)
+    (skip_pager)
+    (skip_tasklist)
+    (wintype "dock")
+    (pin)
+    (geometry "100x40+1700+1050")
+  )
+)
+

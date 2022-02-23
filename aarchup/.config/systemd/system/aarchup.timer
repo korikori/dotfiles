@@ -1,0 +1,9 @@
+[Unit]
+Description=Run aarchup in a given frequency 
+
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=6h
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Run aarchup after suspend
+After=suspend.target
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/aarchup -t 5 -a "yay -Qu"
+
+[Install]
+WantedBy=suspend.target
+WantedBy=network-online.target
