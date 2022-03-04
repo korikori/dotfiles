@@ -387,7 +387,8 @@
           <enabled>true</enabled>
           <name>Web Browser</name>
         </startupnotify>
-        <command>firefox --profile /home/kori/.mozilla/firefox/p0a1q7i8.casual</command>
+        <command>firefox --profile ~/.mozilla/firefox/p0a1q7i8.casual</command>
+        <!--  for thinkpad <command>firefox --profile ~/.mozilla/firefox/slo9ty49.casual</command> -->
       </action>
     </keybind>
     <keybind key="W-q">
