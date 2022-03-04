@@ -6,6 +6,8 @@ xbacklight -set 85
 
 ## Enable "power management"
 cbatticon &
+#second battery for thinkpad?
+#tp-battery-icon &
 
 #notification daemon
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
