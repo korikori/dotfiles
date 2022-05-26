@@ -96,7 +96,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#2aa198"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pacnam="yay -Pw; yay -Syu; sudo pacman -Syu; sudo paccache -rk2; pass git pull; pass git push; omz update; "
+alias pacnam="yay -Pw; sudo pacman -Sy archlinux-keyring --needed; yay -Syu; sudo paccache -rk2; pass git pull; pass git push; omz update; "
+
+bak () {
+  cp $1{,.bak}
+}
 
 #completion, prompt
 autoload -Uz compinit promptinit
