@@ -9,3 +9,4 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 fi
 PATH=$PATH:/home/kori/bin
 export PATH
+export QT_AUTO_SCREEN_SCALE_FACTOR=1

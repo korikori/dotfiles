@@ -1,11 +1,27 @@
 [global_config]
+  title_transmit_bg_color = "#000000"
+  title_inactive_bg_color = "#000000"
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   suppress_multiple_term_dialog = True
   title_font = 3270Medium Nerd Font Medium 9
-  title_inactive_bg_color = "#000000"
-  title_transmit_bg_color = "#000000"
 [keybindings]
   hide_window = None
+[profiles]
+  [[default]]
+    urgent_bell = True
+    background_color = "#002b36"
+    background_darkness = 0.9
+    background_type = transparent
+    color_scheme = custom
+    cursor_color = "#d8d8d8"
+    font = Hack 9
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -45,19 +61,3 @@
       type = Terminal
       uuid = bc535918-fb15-4ab7-b510-31c52ee29e1d
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#002b36"
-    background_darkness = 0.9
-    background_type = transparent
-    color_scheme = custom
-    cursor_color = "#d8d8d8"
-    font = Hack 11
-    foreground_color = "#839496"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scrollback_infinite = True
-    scrollback_lines = 5000
-    scrollbar_position = hidden
-    show_titlebar = False
-    urgent_bell = True
-    use_system_font = False

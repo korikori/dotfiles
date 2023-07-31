@@ -1,0 +1,42 @@
+# chonky conky
+
+background no
+use_xft yes
+xftfont hack:size=8
+xftalpha 0.5
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type desktop 
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200 200 
+maximum_width 240
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color grey
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 5
+gap_y 35
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+CPU $alignc ${freq_g}Ghz/${cpu cpu0}% $alignr ${acpitemp}C 
+${loadgraph 20,200 888888 FFFFFF -t -l}
+
+RAM $alignc $mem / $memmax $alignr $memperc%
+$membar
+/ $alignc ${fs_used /home/} / ${fs_size /home/} $alignr ${fs_used_perc /home/}%
+${fs_bar /home/}
+UPTIME ${alignr}$uptime${font}
+KERNEL ${alignr}${kernel}
+UP ${upspeed wlp1s0} ${alignr}${downspeed wlp1s0} DOWN
+${downspeedgraph wlp1s0 20,200 888888 FFFFFF -t -l}
