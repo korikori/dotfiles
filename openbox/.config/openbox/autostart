@@ -19,8 +19,6 @@ pcmanfm -d &
 
 ## Launch panel
 tint2 &
-#xfce4-panel &
-
 ## Enable Eyecandy - off by default, uncomment one of the commands below.
 picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 --config /dev/null &
 
@@ -29,6 +27,3 @@ picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 --config /dev/nul
 
 ## cyrillic
 setxkbmap -model pc105 -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle,grp_led:caps" &
-
-## caps lock == control
-#(sleep 1 && xmodmap ~/.Xmodmap) &
