@@ -36,7 +36,7 @@ RAM $alignc $mem / $memmax $alignr $memperc%
 $membar
 / $alignc ${fs_used /home/} / ${fs_size /home/} $alignr ${fs_used_perc /home/}%
 ${fs_bar /home/}
-UPTIME ${alignr}$uptime${font}
+UPTIME ${alignr}$uptime_short
 KERNEL ${alignr}${kernel}
 UP ${upspeed wlp1s0} ${alignr}${downspeed wlp1s0} DOWN
 ${downspeedgraph wlp1s0 20,200 888888 FFFFFF -t -l}
