@@ -495,7 +495,7 @@
 		<item label="Exit">
 			<action name="Execute">
 				<execute>
-					ruby ~/bin/cb-exit.rb
+					bash ~/bin/cb-exit.sh
 				</execute>
 			</action>
 		</item>
