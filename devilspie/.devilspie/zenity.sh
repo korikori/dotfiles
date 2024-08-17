@@ -1,0 +1,4 @@
+(if
+    (matches (window_name) "Log out")
+    (center)
+)
