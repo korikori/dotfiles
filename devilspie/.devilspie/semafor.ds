@@ -1,5 +1,5 @@
 (if
-  (matches (application_name) "pyICDSemafor-tickets")
+  (matches (window_name) "pyICDSemafor-tickets")
   (begin
     (stick)
     (above)
