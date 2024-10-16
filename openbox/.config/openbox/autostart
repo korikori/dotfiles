@@ -6,7 +6,9 @@ xbacklight -set 50
 
 ## Enable "power management"
 cbatticon &
-ideapad-perf-tray.rb &
+volumeicon &
+#enable on ideapad
+#ideapad-perf-tray.rb &
 
 #notification daemon
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
@@ -20,8 +22,8 @@ pcmanfm -d &
 ## Launch panel
 tint2 &
 
-## Enable Eyecandy - off by default, uncomment one of the commands below.
-picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 --config /dev/null &
+## Enable Eyecandy 
+picom --backend glx -cf -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 &
 
 ## Launch network manager applet
 (sleep 4s && nm-applet) &
@@ -29,5 +31,5 @@ picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 --config /dev/nul
 ## cyrillic
 setxkbmap -model pc105 -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle,grp_led:caps" &
 
-## conky
-conky &
+## devilspie
+devilspie &
