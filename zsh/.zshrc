@@ -3,12 +3,14 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export EDITOR=nano
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/kori/.oh-my-zsh
+export ZSH=/home/kori/.oh-my-zsh
   
 # sublime nano
-  export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl'; else echo 'nano'; fi)"
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl'; else echo 'nano'; fi)"
 
-  export ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS=0
+export ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS=0
+export  ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
+export ZSH_FZF_HISTORY_SEARCH_REMOVE_DUPLICATES='y'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 ZSH_THEME="agnoster"
@@ -16,7 +18,7 @@ ZSH_THEME="agnoster"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT=true
 
-plugins=(git zsh-autosuggestions zsh-fzf-history-search)
+plugins=(git zsh-autosuggestions zsh-fzf-history-search autoupdate)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#2aa198"
@@ -41,15 +43,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#2aa198"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set personal aliases
 alias pacnam="yay -Pw; sudo pacman -Syy archlinux-keyring pacman --needed; yay -Syu; sudo paccache -rk2; pass git pull; pass git push; zsh ~/bin/cyr.sh; omz update; "
+alias pbc="privatebin create"
 
 bak () {
   cp $1{,.bak}
