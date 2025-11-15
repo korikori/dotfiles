@@ -9,3 +9,6 @@ x.2025
 6.2025
 - back to conky with a classic crunchbang inspired config
 - kitty instead of terminator
+
+11.2025
+- back to fish instead of zsh
